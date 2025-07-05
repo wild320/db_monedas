@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: dockerbdmonedastt
+    ports:
+      - "5440:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sa
+      POSTGRES_DB: monedas
+    networks:
+      - red
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
+
+networks:
+  red:
+    driver: bridge
