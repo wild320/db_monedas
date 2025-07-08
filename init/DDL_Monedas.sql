@@ -1,4 +1,11 @@
 /* Crear tabla MONEDA */
+CREATE USER docker;
+CREATE DATABASE monedas;
+GRANT ALL PRIVILEGES ON DATABASE monedas TO docker;
+
+--Cambiar la conexión
+\c monedas
+
 CREATE TABLE Moneda( 
 	Id SERIAL PRIMARY KEY,
 	Moneda VARCHAR(100) NOT NULL,

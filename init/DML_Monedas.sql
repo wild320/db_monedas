@@ -1,3 +1,6 @@
+--Cambiar la conexión
+\c monedas
+
 /* Agregar registros de MONEDA */
 INSERT INTO Moneda (Id, Sigla, Moneda)  VALUES(1, 'AED', 'Dírham de los Emiratos Árabes Unidos');
 INSERT INTO Moneda (Id, Sigla, Moneda)  VALUES(2, 'AFN', 'Afgani');
